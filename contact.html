@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Formulaire</title>
+
+    <!-- Common Kendo UI CSS for web widgets and widgets for data visualization. -->
+    <link href="styles/kendo.common.min.css" rel="stylesheet" />
+
+    <!-- Default Kendo UI theme CSS for web widgets and widgets for data visualization. -->
+    <link href="styles/kendo.office365.min.css" rel="stylesheet" />
+
+    <!-- (Optional) Kendo UI Hybrid CSS. Include only if you will use the mobile devices features. -->
+    <link href="styles/kendo.default.mobile.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <div class="jumbotron"></div>
+    <div class="container">
+        <div class="row">
+            <form id="myform" class="form-horizontal" onsubmit="return false">
+                <pre>
+                    {
+                        nom: <span data-bind="text: last"></span>,
+                        prenom: <span data-bind="text: first"></span>,
+                        sexe: <span data-bind="text: sexe"></span>,
+                        date de naissance: <span data-bind="text: displayBirth"></span>,
+                        pays: [<span data-bind="text: displayCountry"></span>]
+                    }
+                </pre>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="nom">Nom</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="" data-bind="value: last" placeholder="Nom"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="first">Prenom</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="" data-bind="value: first" placeholder="Prenom"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Sexe :</label>
+                    <div class="col-sm-10">
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="optionsRadios" id="Radio1" data-bind="checked: sexe" value="Homme">
+                            Homme
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" name="optionsRadios" id="Radio3" data-bind="checked: sexe" value="Femme">
+                            Femme
+                          </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="country">Pays</label>
+                    <div class="col-sm-10">
+                        <input data-role="combobox" data-text-field="name" data-value-field="value" data-bind="source: countries, value: selectedCountry">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="birth">Date de naissance</label>
+                    <div class="col-sm-10">
+                        <input data-role="datepicker" data-bind=" value: birth" data-format="yyyy/MM/dd">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button data-bind="click: pushDataToGrid" class="btn btn-default">Ajouter</button>
+                    </div>
+                </div>
+            </form>
+                <div data-role="grid" data-sortable="true" data-bind="source: dataGrid" data-column="['Nom','Prénom','Sexe','Date de naissance', 'Pays']" data-scrollable="false" ></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery JavaScript -->
+    <script src="scripts/jquery.min.js"></script>
+
+    <!-- Kendo UI combined JavaScript -->
+    <script src="scripts/kendo.all.min.js"></script>
+
+    <!-- external JavaScript file -->
+    <script src="scripts/main.js"></script>    
+    
+</body>
+</html>
