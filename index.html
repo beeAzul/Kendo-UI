@@ -6,13 +6,14 @@
     <!-- Common Kendo UI CSS for web widgets and widgets for data visualization. -->
     <link href="styles/kendo.common.min.css" rel="stylesheet" />
 
+    <!-- Common Kendo UI CSS for web widgets and widgets for data visualization. -->
+    <link href="styles/kendo.uniform.min.css" rel="stylesheet" />
+
     <!-- Default Kendo UI theme CSS for web widgets and widgets for data visualization. -->
     <link href="styles/kendo.office365.min.css" rel="stylesheet" />
 
-    <!-- (Optional) Kendo UI Hybrid CSS. Include only if you will use the mobile devices features. -->
-    <link href="styles/kendo.default.mobile.min.css" rel="stylesheet" type="text/css" />
-
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    
     <link href="styles/styles.css" rel="stylesheet" />
 
 </head>
@@ -28,9 +29,10 @@
     <main id="main">
         <div id="left-content">
             <div id="treeview"></div>
+            <div id="treeview-test"></div>
         </div>
         <div id="content">
-            <div id="grid"></div>
+            <div id="grid" data-auto-bind="false"></div>
         </div>
     </main>
     <footer id="footer"></footer>

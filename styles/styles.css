@@ -5,3 +5,10 @@
 div#menu-size {
     overflow: visible;
 }
+
+#treeview .k-sprite {
+    background-image: url("http://demos.telerik.com/kendo-ui/content/web/treeview/coloricons-sprite.png");
+  }
+
+  .folder { background-position: 0 -16px; }
+  .html { background-position: 0 -48px; }
